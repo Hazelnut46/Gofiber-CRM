@@ -1,0 +1,26 @@
+package main
+
+
+import (
+	"github.com/hazelnut46/Gofiber-CRM/database"
+	"github.com/gofiber/fiber/v2"
+)
+
+
+func setupRoutes(app *fiber.App) {
+	app.Get(GetLead)
+	app.Get(GetLead)
+	app.Post(NewLead)
+	app.Delete(DeleteLead)
+} 
+
+func initDatabase() {
+
+}
+
+
+func main( ) {
+	app := fiber.New()
+	setupRoutes(app)
+	app.Listen(3000)
+}
